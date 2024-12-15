@@ -1,0 +1,253 @@
+.overview-container {
+    padding: 20px;
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+}
+
+.profile-section {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.profile-image-large {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item h4 {
+    color: #007bff;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.stat-item p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.course-card {
+    background: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.course-card h5 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.course-card p {
+    color: #666;
+    margin: 0;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.section-title .icon {
+    margin-right: 10px;
+    color: #007bff;
+    font-size: 1.2rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.skill-item {
+    margin-bottom: 0.5rem;
+}
+
+.experience-timeline {
+    position: relative;
+    padding-left: 20px;
+}
+
+.experience-item {
+    position: relative;
+    padding-bottom: 1.5rem;
+    padding-left: 20px;
+    border-left: 2px solid #e9ecef;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -7px;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #007bff;
+}
+
+.experience-item:last-child {
+    padding-bottom: 0;
+}
+
+.experience-item h6 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.experience-item .company {
+    color: #007bff;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.experience-item .duration {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.experience-item .description {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.certification-item {
+    background: #f8f9fa;
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+}
+
+.certification-item h6 {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.rating {
+    display: flex;
+    gap: 2px;
+}
+
+.star {
+    color: #ddd;
+    font-size: 1rem;
+}
+
+.star.filled {
+    color: #ffc107;
+}
+
+.project-preview {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.tech-tags {
+    display: flex;
+    gap: 8px;
+    margin: 10px 0;
+}
+
+.upcoming-events {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.event-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.event-date {
+    background: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-right: 15px;
+    font-size: 0.9rem;
+}
+
+.event-title {
+    color: #333;
+    font-weight: 500;
+}
+
+.card {
+    height: 100%;
+}
+
+@media (max-width: 992px) {
+    .overview-container {
+        height: auto;
+        overflow-y: visible;
+    }
+}
+
+.equal-height-card {
+    height: 400px;
+    overflow-y: auto;
+}
+
+.equal-height-card .card-body {
+    padding: 1.25rem;
+}
+
+.equal-height-card::-webkit-scrollbar {
+    width: 6px;
+}
+
+.equal-height-card::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.equal-height-card::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.equal-height-card::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.experience-item, .project-preview, .certification-item {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+}
+
+.section-title {
+    position: sticky;
+    top: 0;
+    background: white;
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+    z-index: 1;
+} 
