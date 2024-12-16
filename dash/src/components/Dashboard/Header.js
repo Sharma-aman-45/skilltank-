@@ -1,9 +1,19 @@
 import React from 'react';
 import { Navbar, Nav, Form, InputGroup, Dropdown } from 'react-bootstrap';
 import { FaBell, FaSearch } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import './Header.css';
 
 const Header = () => {
+    const navigate = useNavigate(); // Initialize useNavigate
+
+    const handleLogout = () => {
+        // Clear the token from local storage
+        localStorage.removeItem('token');
+        // Redirect to the login page
+        navigate('/login');
+    };
+
     return (
         <Navbar bg="white" className="dashboard-header">
             <div className="d-flex justify-content-between w-100 align-items-center">
@@ -14,7 +24,7 @@ const Header = () => {
                 <div className="header-search">
                     <InputGroup>
                         <Form.Control
-                            placeholder="what you looking for ?"
+                            placeholder="What are you looking for?"
                             aria-label="Search"
                         />
                         <InputGroup.Text>
@@ -38,9 +48,8 @@ const Header = () => {
                         </Dropdown.Toggle>
                         <Dropdown.Menu>
                             <Dropdown.Item>Profile</Dropdown.Item>
-                          
                             <Dropdown.Divider />
-                            <Dropdown.Item>Logout</Dropdown.Item>
+                            <Dropdown.Item onClick={handleLogout}>Logout</Dropdown.Item> {/* Add onClick handler */}
                         </Dropdown.Menu>
                     </Dropdown>
                 </div>
@@ -49,4 +58,4 @@ const Header = () => {
     );
 };
 
-export default Header; 
+export default Header;
