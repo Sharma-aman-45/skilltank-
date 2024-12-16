@@ -79,7 +79,7 @@ const Overview = () => {
                 <Col lg={3}>
                     <div className="profile-section">
                         <img 
-                            src="/Profile.png" 
+                            src="/profile.png" 
                             alt="Profile" 
                             className="profile-image-large"
                         />
